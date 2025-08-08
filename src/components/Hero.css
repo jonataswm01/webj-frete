@@ -89,11 +89,11 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(10px);
   padding: var(--spacing-sm);
   border-radius: var(--radius-md);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .hero__stat-icon {
@@ -105,13 +105,13 @@
   display: block;
   font-size: 1.5rem;
   font-weight: var(--font-weight-bold);
-  color: var(--color-white);
+  color: var(--color-gray-dark);
 }
 
 .hero__stat-label {
   display: block;
   font-size: 0.875rem;
-  color: var(--color-gray-light);
+  color: var(--color-gray);
 }
 
 /* CTAs */
@@ -152,27 +152,53 @@
 }
 
 .hero__cta-secondary {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--color-white);
+  background: linear-gradient(135deg, #f4f4f4, #dcdcdc);
+  color: var(--color-gray-dark);
   padding: var(--spacing-md) var(--spacing-xl);
   border-radius: var(--radius-lg);
   font-weight: var(--font-weight-semibold);
   font-size: 1.1rem;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
+  border: 1px solid #cfcfcf;
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero__cta-secondary:hover {
-  background: rgba(255, 255, 255, 0.2);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
   border-color: var(--color-orange);
 }
 
 .hero__play-icon {
   font-size: 1rem;
+  color: var(--color-gray-dark);
+}
+
+/* Shimmer/brilho contínuo no CTA secundário */
+.hero__cta-secondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  animation: heroShine 2.5s linear infinite;
+}
+
+@keyframes heroShine {
+  0% { left: -150%; }
+  100% { left: 150%; }
 }
 
 /* Visual/Imagem */
