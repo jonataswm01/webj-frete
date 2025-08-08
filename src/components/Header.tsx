@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaBars, FaTimes, FaTruck } from 'react-icons/fa';
+import IconWrapper from './IconWrapper';
 import './Header.css';
 
 const Header: React.FC = () => {
@@ -48,7 +49,7 @@ const Header: React.FC = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <FaTruck className="header__logo-icon" />
+            <IconWrapper icon={FaTruck} className="header__logo-icon" />
             <span className="header__logo-text">WEBJ-Frete</span>
           </motion.div>
 
@@ -79,7 +80,7 @@ const Header: React.FC = () => {
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <FaTimes /> : <FaBars />}
+            {isMenuOpen ? <IconWrapper icon={FaTimes} /> : <IconWrapper icon={FaBars} />}
           </button>
         </div>
 

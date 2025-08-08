@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaQuoteLeft, FaStar, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import IconWrapper from './IconWrapper';
 import { Testimonial } from '../types';
 import './Testimonials.css';
 
@@ -69,7 +70,8 @@ const Testimonials: React.FC = () => {
 
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, index) => (
-      <FaStar
+      <IconWrapper 
+        icon={FaStar}
         key={index}
         className={`testimonial__star ${index < rating ? 'testimonial__star--filled' : ''}`}
       />
@@ -112,7 +114,7 @@ const Testimonials: React.FC = () => {
                 transition={{ duration: 0.5 }}
               >
                 <div className="testimonial-card__quote">
-                  <FaQuoteLeft className="testimonial-card__quote-icon" />
+                  <IconWrapper icon={FaQuoteLeft} className="testimonial-card__quote-icon" />
                 </div>
                 
                 <p className="testimonial-card__content">
@@ -147,7 +149,7 @@ const Testimonials: React.FC = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <FaChevronLeft />
+                <IconWrapper icon={FaChevronLeft} />
               </motion.button>
               
               <motion.button
@@ -156,7 +158,7 @@ const Testimonials: React.FC = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <FaChevronRight />
+                <IconWrapper icon={FaChevronRight} />
               </motion.button>
             </div>
           </div>

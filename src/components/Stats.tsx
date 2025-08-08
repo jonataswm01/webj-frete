@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaTruck, FaUsers, FaRoute, FaGlobe } from 'react-icons/fa';
+import IconWrapper from './IconWrapper';
 import { Statistic } from '../types';
 import './Stats.css';
 
@@ -60,8 +61,9 @@ const Stats: React.FC = () => {
   };
 
   const getIconComponent = (index: number) => {
-    const icons = [FaTruck, FaUsers, FaRoute, FaGlobe];
-    return icons[index] || FaTruck;
+    const icons: any[] = [FaTruck, FaUsers, FaRoute, FaGlobe];
+    const IconComponent = icons[index] || FaTruck;
+    return <IconWrapper icon={IconComponent} />;
   };
 
   return (
@@ -104,7 +106,7 @@ const Stats: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <div className="stat-card__icon">
-                  <IconComponent />
+                  {IconComponent}
                 </div>
                 
                 <div className="stat-card__content">

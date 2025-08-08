@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaTruck, FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaArrowUp } from 'react-icons/fa';
+import IconWrapper from './IconWrapper';
 import './Footer.css';
 
 const Footer: React.FC = () => {
@@ -18,7 +19,7 @@ const Footer: React.FC = () => {
           {/* Logo e descrição */}
           <div className="footer__brand">
             <div className="footer__logo">
-              <FaTruck className="footer__logo-icon" />
+              <IconWrapper icon={FaTruck} className="footer__logo-icon" />
               <span className="footer__logo-text">WEBJ-Frete</span>
             </div>
             <p className="footer__description">
@@ -32,7 +33,7 @@ const Footer: React.FC = () => {
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <FaFacebook />
+                <IconWrapper icon={FaFacebook} />
               </motion.a>
               <motion.a 
                 href="#" 
@@ -40,7 +41,7 @@ const Footer: React.FC = () => {
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <FaInstagram />
+                <IconWrapper icon={FaInstagram} />
               </motion.a>
               <motion.a 
                 href="#" 
@@ -48,7 +49,7 @@ const Footer: React.FC = () => {
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <FaLinkedin />
+                <IconWrapper icon={FaLinkedin} />
               </motion.a>
               <motion.a 
                 href="#" 
@@ -56,7 +57,7 @@ const Footer: React.FC = () => {
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <FaTwitter />
+                <IconWrapper icon={FaTwitter} />
               </motion.a>
             </div>
           </div>
@@ -127,7 +128,7 @@ const Footer: React.FC = () => {
             whileTap={{ scale: 0.9 }}
             aria-label="Voltar ao topo"
           >
-            <FaArrowUp />
+            <IconWrapper icon={FaArrowUp} />
           </motion.button>
         </div>
       </div>

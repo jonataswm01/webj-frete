@@ -11,6 +11,7 @@ import {
   FaUsers,
   FaMapMarkedAlt
 } from 'react-icons/fa';
+import IconWrapper from './IconWrapper';
 import { Benefit } from '../types';
 import './Benefits.css';
 
@@ -72,7 +73,7 @@ const Benefits: React.FC = () => {
   ];
 
   const getIconComponent = (iconName: string) => {
-    const iconMap: { [key: string]: React.ComponentType } = {
+    const iconMap: { [key: string]: any } = {
       FaTruck,
       FaRoute,
       FaChartLine,
@@ -82,7 +83,8 @@ const Benefits: React.FC = () => {
       FaUsers,
       FaMapMarkedAlt
     };
-    return iconMap[iconName] || FaTruck;
+    const IconComponent = iconMap[iconName] || FaTruck;
+    return <IconWrapper icon={IconComponent} />;
   };
 
   const containerVariants = {
@@ -147,7 +149,7 @@ const Benefits: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 <div className="benefit-card__icon">
-                  <IconComponent />
+                  {IconComponent}
                 </div>
                 <h3 className="benefit-card__title">{benefit.title}</h3>
                 <p className="benefit-card__description">{benefit.description}</p>

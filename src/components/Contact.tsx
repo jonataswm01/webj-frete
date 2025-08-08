@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaSend, FaCheck } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane, FaCheck } from 'react-icons/fa';
 import { ContactForm } from '../types';
+import IconWrapper from './IconWrapper';
 import './Contact.css';
 
 const Contact: React.FC = () => {
@@ -88,7 +89,7 @@ const Contact: React.FC = () => {
             <div className="contact__info-items">
               <div className="contact__info-item">
                 <div className="contact__info-icon">
-                  <FaEnvelope />
+                  <IconWrapper icon={FaEnvelope} />
                 </div>
                 <div className="contact__info-content">
                   <h4>Email</h4>
@@ -98,7 +99,7 @@ const Contact: React.FC = () => {
 
               <div className="contact__info-item">
                 <div className="contact__info-icon">
-                  <FaPhone />
+                  <IconWrapper icon={FaPhone} />
                 </div>
                 <div className="contact__info-content">
                   <h4>Telefone</h4>
@@ -108,7 +109,7 @@ const Contact: React.FC = () => {
 
               <div className="contact__info-item">
                 <div className="contact__info-icon">
-                  <FaMapMarkerAlt />
+                  <IconWrapper icon={FaMapMarkerAlt} />
                 </div>
                 <div className="contact__info-content">
                   <h4>Endereço</h4>
@@ -153,7 +154,7 @@ const Contact: React.FC = () => {
                   transition={{ duration: 0.5 }}
                 >
                   <div className="contact__success-icon">
-                    <FaCheck />
+                    <IconWrapper icon={FaCheck} />
                   </div>
                   <h4>Mensagem enviada com sucesso!</h4>
                   <p>Entraremos em contato em breve.</p>
@@ -223,7 +224,7 @@ const Contact: React.FC = () => {
                       </>
                     ) : (
                       <>
-                        <FaSend className="contact__form-icon" />
+                        <IconWrapper icon={FaPaperPlane} className="contact__form-icon" />
                         Enviar Mensagem
                       </>
                     )}

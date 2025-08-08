@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaArrowRight, FaPlay, FaTruck, FaRoute } from 'react-icons/fa';
+import IconWrapper from './IconWrapper';
 import './Hero.css';
 
 const Hero: React.FC = () => {
@@ -55,14 +56,14 @@ const Hero: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
             >
               <div className="hero__stat">
-                <FaTruck className="hero__stat-icon" />
+                <IconWrapper icon={FaTruck} className="hero__stat-icon" />
                 <div>
                   <span className="hero__stat-number">50K+</span>
                   <span className="hero__stat-label">Caminhoneiros</span>
                 </div>
               </div>
               <div className="hero__stat">
-                <FaRoute className="hero__stat-icon" />
+                <IconWrapper icon={FaRoute} className="hero__stat-icon" />
                 <div>
                   <span className="hero__stat-number">10K+</span>
                   <span className="hero__stat-label">Transportadoras</span>
@@ -84,7 +85,7 @@ const Hero: React.FC = () => {
                 onClick={scrollToContact}
               >
                 Testar Sistema Gratuitamente
-                <FaArrowRight className="hero__cta-icon" />
+                <IconWrapper icon={FaArrowRight} className="hero__cta-icon" />
               </motion.button>
               
               <motion.button 
@@ -92,7 +93,7 @@ const Hero: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <FaPlay className="hero__play-icon" />
+                <IconWrapper icon={FaPlay} className="hero__play-icon" />
                 Ver Demonstração
               </motion.button>
             </motion.div>
@@ -109,7 +110,7 @@ const Hero: React.FC = () => {
               <div className="hero__truck-image">
                 {/* Placeholder para imagem de caminhão */}
                 <div className="hero__truck-placeholder">
-                  <FaTruck className="hero__truck-icon" />
+                  <IconWrapper icon={FaTruck} className="hero__truck-icon" />
                 </div>
               </div>
               
