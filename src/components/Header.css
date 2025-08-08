@@ -42,13 +42,15 @@
 }
 
 .header__logo-text {
-  background: linear-gradient(135deg, #e6e6e6, #bdbdbd, #757575);
+  background: linear-gradient(135deg, #dcdcdc, #a6a6a6, #6e6e6e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  background-size: 200% 200%;
-  animation: headerMetallicShift 6s linear infinite;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  background-size: 120% 120%;
+  animation: headerMetallicShift 10s ease-in-out infinite;
+  will-change: background-position;
+  -webkit-text-stroke: 0.2px rgba(0, 0, 0, 0.25);
+  text-shadow: none;
 }
 
 /* Navegação Desktop */
@@ -69,11 +71,12 @@
   background: none;
   border: none;
   color: transparent;
-  background: linear-gradient(135deg, #e6e6e6, #bdbdbd, #757575);
+  background: linear-gradient(135deg, #dcdcdc, #a6a6a6, #6e6e6e);
   -webkit-background-clip: text;
   background-clip: text;
-  background-size: 200% 200%;
-  animation: headerMetallicShift 6s linear infinite;
+  background-size: 120% 120%;
+  animation: headerMetallicShift 10s ease-in-out infinite;
+  will-change: background-position;
   font-weight: var(--font-weight-medium);
   font-size: 1rem;
   cursor: pointer;
@@ -81,7 +84,8 @@
   border-radius: var(--radius-sm);
   transition: all 0.3s ease;
   position: relative;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  -webkit-text-stroke: 0.2px rgba(0, 0, 0, 0.2);
+  text-shadow: none;
 }
 
 .header__nav-list button:hover {
@@ -137,7 +141,9 @@
 
 @keyframes headerMetallicShift {
   0% { background-position: 0% 50%; }
+  25% { background-position: 60% 45%; }
   50% { background-position: 100% 50%; }
+  75% { background-position: 40% 55%; }
   100% { background-position: 0% 50%; }
 }
 
