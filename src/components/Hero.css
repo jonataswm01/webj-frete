@@ -57,9 +57,9 @@
   font-size: 3.5rem;
   font-weight: var(--font-weight-bold);
   line-height: 1.2;
-  color: var(--color-white);
+  color: var(--color-gray-dark);
   margin-bottom: var(--spacing-md);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: none;
 }
 
 .hero__title-highlight {
@@ -72,10 +72,10 @@
 
 .hero__subtitle {
   font-size: 1.25rem;
-  color: var(--color-gray-light);
+  color: var(--color-gray-dark);
   margin-bottom: var(--spacing-xl);
   line-height: 1.6;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: none;
 }
 
 /* Estatísticas rápidas */
@@ -117,8 +117,10 @@
 /* CTAs */
 .hero__ctas {
   display: flex;
-  gap: var(--spacing-md);
+  gap: var(--spacing-lg);
   flex-wrap: wrap;
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
 }
 
 .hero__cta-primary {
