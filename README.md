@@ -1,46 +1,152 @@
-# Getting Started with Create React App
+# WEBJ-Frete - Landing Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Uma landing page moderna e responsiva para a empresa WEBJ-Frete, especializada em soluções de transporte rodoviário no Brasil.
 
-## Available Scripts
+## 🚛 Sobre o Projeto
 
-In the project directory, you can run:
+O WEBJ-Frete é uma plataforma que conecta caminhoneiros e transportadoras de forma inteligente, oferecendo soluções modernas para otimizar fretes, rotas e maximizar lucros no setor de transporte rodoviário.
 
-### `npm start`
+## ✨ Características
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Design Moderno**: Interface limpa e profissional com paleta de cores do setor de transporte
+- **Totalmente Responsivo**: Funciona perfeitamente em desktop, tablet e mobile
+- **Animações Suaves**: Animações minimalistas mas presentes usando Framer Motion
+- **Performance Otimizada**: Código limpo e eficiente
+- **Acessibilidade**: Seguindo as melhores práticas de acessibilidade web
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🎨 Paleta de Cores
 
-### `npm test`
+- **Preto**: #000000
+- **Branco**: #ffffff
+- **Cinza Claro**: #f5f5f5
+- **Cinza**: #666666
+- **Cinza Escuro**: #333333
+- **Prata**: #c0c0c0
+- **Laranja**: #ff6b35
+- **Amarelo**: #ffd700
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tecnologias Utilizadas
 
-### `npm run build`
+- **React 18** - Framework principal
+- **TypeScript** - Tipagem estática
+- **Framer Motion** - Animações
+- **React Icons** - Ícones
+- **React Intersection Observer** - Detecção de scroll
+- **CSS3** - Estilos modernos com variáveis CSS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📱 Seções da Landing Page
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Header** - Navegação fixa com menu responsivo
+2. **Hero** - Seção principal com CTA e imagem de caminhão
+3. **Benefits** - Benefícios do sistema com cards animados
+4. **Testimonials** - Depoimentos de clientes com carrossel
+5. **Stats** - Números impressionantes do setor
+6. **Contact** - Formulário de contato e informações
+7. **Footer** - Links e informações da empresa
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Como Executar
 
-### `npm run eject`
+### Pré-requisitos
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Node.js (versão 16 ou superior)
+- npm ou yarn
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Instalação
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Clone o repositório:
+```bash
+git clone [URL_DO_REPOSITORIO]
+cd webj-frete
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2. Instale as dependências:
+```bash
+npm install
+```
 
-## Learn More
+3. Execute o projeto em modo de desenvolvimento:
+```bash
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Build para Produção
+
+```bash
+npm run build
+```
+
+## 📁 Estrutura do Projeto
+
+```
+src/
+├── components/          # Componentes React
+│   ├── Header.tsx
+│   ├── Hero.tsx
+│   ├── Benefits.tsx
+│   ├── Testimonials.tsx
+│   ├── Stats.tsx
+│   ├── Contact.tsx
+│   ├── Footer.tsx
+│   └── *.css           # Estilos dos componentes
+├── styles/
+│   └── globals.css     # Estilos globais
+├── types/
+│   └── index.ts        # Tipos TypeScript
+└── App.tsx             # Componente principal
+```
+
+## 🎯 Funcionalidades
+
+- **Navegação Suave**: Scroll suave entre seções
+- **Menu Responsivo**: Menu hambúrguer para mobile
+- **Animações de Scroll**: Elementos aparecem conforme o scroll
+- **Formulário Interativo**: Formulário de contato com validação
+- **Carrossel de Depoimentos**: Navegação entre depoimentos
+- **Botão Voltar ao Topo**: Navegação rápida para o topo
+
+## 📱 Responsividade
+
+O site é totalmente responsivo e otimizado para:
+- **Desktop**: 1200px+
+- **Tablet**: 768px - 1199px
+- **Mobile**: 320px - 767px
+
+## 🔧 Personalização
+
+### Cores
+As cores podem ser facilmente alteradas editando as variáveis CSS em `src/styles/globals.css`:
+
+```css
+:root {
+  --color-orange: #ff6b35;
+  --color-yellow: #ffd700;
+  /* ... outras cores */
+}
+```
+
+### Conteúdo
+O conteúdo pode ser editado diretamente nos componentes React em `src/components/`.
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT.
+
+## 👥 Contribuição
+
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 📞 Contato
+
+- **Email**: contato@webjfrete.com.br
+- **Telefone**: (11) 99999-9999
+- **Endereço**: São Paulo, SP - Brasil
+
+---
+
+Desenvolvido com ❤️ para revolucionar o transporte rodoviário no Brasil.
